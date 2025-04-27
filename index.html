@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Buy premium solar panels, inverters, and batteries from Ruflex Ventures Store. Fast delivery, secure payments, and excellent customer service.">
+  <meta name="keywords" content="solar panels, inverters, car batteries, solar accessories, Nigeria, renewable energy">
+  <meta name="author" content="Ruflex Ventures">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>Ruflex Venue - Solar & Battery Store</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #06264e, #0a3d62);
+      padding: 20px 30px;
+      color: white;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+  
+
+    header .logo h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 36px;
+      margin: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    header .logo p {
+      font-size: 14px;
+      margin-top: 5px;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 15px;
+      
+      
+    }
+
+    nav a {
+      margin: 0 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+      
+      
+    }
+
+    nav a:hover {
+      color: #f4f4f4;
+    }
+
+    nav a:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: #f4f4f4;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav a:hover:after {
+      transform: scaleX(1);
+    }
+
+    .hero {
+      background: url('images/solar-bg.jpg') no-repeat center center/cover;
+      padding: 80px 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-out;
+      
+    }
+
+    .hero p {
+      font-size: 20px;
+      animation: fadeIn 3s ease-out;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+  .products, .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product, .testimonial {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+  
+  
+  /* Animation keyframes */
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  
+  /* Apply animations */
+  .hero h1, .hero p {
+    animation: slideInUp 1.5s ease forwards;
+  }
+
+  .product {
+    animation: bounceIn 1s ease-in-out;
+  }
+
+  .testimonial {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .btn, .btn-outline {
+    animation: pulse 2s infinite;
+  }
+
+  .section h2 {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  nav a {
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
+  /* Delay each product for staggered animation */
+  .product:nth-child(1) { animation-delay: 0.3s; }
+  .product:nth-child(2) { animation-delay: 0.6s; }
+  .product:nth-child(3) { animation-delay: 0.9s; }
+  .product:nth-child(4) { animation-delay: 1.2s; }
+  .product:nth-child(5) { animation-delay: 1.5s; }
+  .product:nth-child(6) { animation-delay: 1.8s; }
+
+  
+  
+  .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .product {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+    }
+    .product p {
+      font-weight: bold;
+      color: #0a3d62;
+      font-size: 18px;
+    }
+  
+  
+   
+    .btn {
+      padding: 10px 20px;
+      background: #06264e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #0a3d62;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      border: 2px solid #06264e;
+      color: #06264e;
+      background-color: transparent;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn-outline:hover {
+      background-color: #06264e;
+      color: white;
+    }
+
+  
+    .testimonial {
+      font-style: italic;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .social-icons img {
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+  
+  
+   h2 {
+     text-align: center;
+   }
+
+    footer {
+      background: #06264e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  
+  
+  #contactForm input,
+  #contactForm textarea,
+  #sendBtn {
+    transition: all 0.3s ease;
+  }
+
+  #sendBtn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+
+  #socialIcons a:hover img {
+    transform: scale(1.1);
+  }
+
+  #socialIcons img {
+    transition: all 0.3s ease;
+  }
+
+
+  
+
+    /* Scroll to Top Button */
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #06264e;
+      color: white;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    #topBtn:hover {
+      background-color: #0a3d62;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      header {
+        text-align: left;
+        padding: 15px;
+      }
+
+      nav {
+        
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 5px 10px;
+        
+      }
+    }
+  
+  #loader {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+
+    .spinner {
+        border: 8px solid #f3f3f3; /* Light gray */
+        border-top: 8px solid #3498db; /* Blue color */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1.5s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+  
+      
+
+    #content {
+        display: none; /* Hide the content initially */
+    }
+
+  
+  /* Animate on scroll */
+@keyframes slideInUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+  
+  
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.social-icons-container a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circle the image itself */
+  object-fit: cover; /* Fit image nicely */
+  padding: 5px; /* Optional: small inner space */
+  background: none; /* No white background */
+}
+  
+
+/* Animate headers */
+header .logo h1,
+header .logo p {
+  animation: bounceIn 1.2s ease-out;
+}
+
+nav a {
+  animation: slideInUp 1s ease-in-out;
+}
+
+/* Animate hero */
+.hero h1 {
+  animation: slideInLeft 1.5s ease;
+}
+.hero p {
+  animation: slideInRight 2s ease;
+}
+
+/* Products fade in */
+.product {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.product:nth-child(1) { animation-delay: 0.2s; }
+.product:nth-child(2) { animation-delay: 0.4s; }
+.product:nth-child(3) { animation-delay: 0.6s; }
+.product:nth-child(4) { animation-delay: 0.8s; }
+.product:nth-child(5) { animation-delay: 1s; }
+.product:nth-child(6) { animation-delay: 1.2s; }
+
+/* Button animation */
+.btn,
+.btn-outline {
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+/* Testimonials animation */
+.testimonial {
+  animation: fadeIn 1.5s ease forwards;
+  transition: transform 0.3s;
+}
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+/* Contact form */
+.contact-form {
+  animation: slideInUp 1s ease;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+  
+  </style>
+</head>
+<body>
+  <div id="loader">
+  <div class="spinner"></div>
+</div>
+    
+  <main id="content">
+  <header>
+    <div class="logo">
+      <h1>Ruflex Ventures</h1>
+      <p>Solar & Battery Store</p>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Power Your Future with Solar</h1>
+    <p>High-quality solar panels, batteries, and inverters delivered nationwide</p>
+    <a href="about.html" class="btn-outline">About Us</a>
+  </section>
+
+  <section class="section" id="products">
+    <h2 style="text-align:center;">Featured Products</h2>
+     <div class="products">
+      <div class="product">
+        <img src="images/solar2560.jpg" alt="Inverter 1.5kVA">
+        <h3> Solar pannel 250W</h3>
+        <p>₦80,000</p>
+        <button class="btn" onclick="order('Solar Pannel 250W', '₦80,000')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/solar300.jpg" alt="Charge Controller 60A">
+        <h3>Solar pannel 300W</h3>
+        <p>₦95,000</p>
+        <button class="btn" onclick="order('Solar pannel 300W', '₦95,000')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/downloadss3456.jpeg" alt="Lithium Battery 200Ah">
+        <h3>Quanta 200Ah Battery</h3>
+        <p>₦140,000</p>
+        <button class="btn" onclick="order('Quanta 200Ah Battery', '₦140,000')">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="images/inverter2.jpg" alt="Hybrid Inverter 5kVA">
+        <h3>Hybrid Inverter 5kVA</h3>
+        <p>₦420,000</p>
+        <button class="btn" onclick="order('Hybrid Inverter 5kVA', '₦420,000')">Add to Cart</button>
+      </div>
+       <div class="product">
+        <img src="images/solarcable.jpg" alt="Hybrid Inverter 5kVA">
+        <h3>Solar Cable (10m)</h3>
+        <p>₦5000</p>
+        <button class="btn" onclick="order('Solar Cable (10m)', '₦5,000')">Add to Cart</button>
+      </div>
+       <div class="product">
+        <img src="images/batteryterminal.jpg" alt="Battery Terminal Clamp">
+        <h3>Battery Terminal Clamp</h3>
+        <p>₦5,000</p>
+        <button class="btn" onclick="order('Battery Terminal Clamp', '₦5,000')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- Order Form Modal -->
+  <div id="orderModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+    <div style="background:#fff; padding:30px; border-radius:8px; width:90%; max-width:400px; position:relative;">
+      <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
+      <h2 style="text-align:center;">Complete Your Order</h2>
+      <form id="orderForm" onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="customerName" placeholder="Your Name" required style="width:100%; margin:10px 0; padding:10px;">
+        <input type="text" id="customerAddress" placeholder="Your Address" required style="width:100%; margin:10px 0; padding:10px;">
+        <input type="tel" id="buyerPhone" placeholder="Your Phone Number" required style="width:100%; margin:10px 0; padding:10px;">
+        <input type="text" id="productName" readonly style="width:100%; margin:10px 0; padding:10px; background:#eee;">
+        <button type="submit" style="padding:10px 20px; background:#06264e; color:white; border:none; width:100%; border-radius:5px;">Proceed to WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+    
+    
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="00000.html" class="btn-outline">Explore More</a>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h2 style="text-align:center;">What Our Customers Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        "Great service and fast delivery. The solar panel is working perfectly!"<br><br>- Chinedu, Lagos
+      </div>
+      <div class="testimonial">
+        "Affordable and reliable batteries. I’ll definitely buy again."<br><br>- Amina, Abuja
+      </div>
+    </div>
+  </section>
+   
+<div class="contact-form">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" required></textarea>
+    <button type="submit" id="sendBtn" class="btn">Send</button>
+  </form>
+
+  <div id="socialIcons" class="social-icons-container" style="display: none;">
+    <a href="#" id="whatsappLink" target="_blank">
+      <img src="icon1.png" alt="WhatsApp">
+    </a>
+    <a href="#" id="emailLink" target="_blank">
+      <img src="icon2.png" alt="Gmail">
+    </a>
+    <a href="#" id="instagramLink" target="_blank">
+      <img src="download.jpeg" alt="Instagram">
+    </a>
+  </div>
+</div>
+  <script>
+    let topButton = document.getElementById("topBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topButton.style.display = "block";
+      } else {
+        topButton.style.display = "none";
+      }
+    };
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+
+
+let cartProduct = '';
+
+    function order(productName, price) {
+      cartProduct = `${productName} - ${price}`;
+      document.getElementById('productName').value = cartProduct;
+      document.getElementById('orderModal').style.display = 'flex';
+    }
+
+    function sendToWhatsApp(event) {
+      event.preventDefault();  // Prevent form submission
+
+      const name = document.getElementById('customerName').value;
+      const phone = document.getElementById('buyerPhone').value;
+      const address = document.getElementById('customerAddress').value;
+      const product = document.getElementById('productName').value;
+
+      const message = `New Order:\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nProduct: ${product}`;
+
+      const whatsappUrl = `https://wa.me/2348027315787?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+      closeModal(); // Close the modal after sending to WhatsApp
+    }
+
+    function closeModal() {
+      document.getElementById('orderModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('orderModal');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+
+  window.onload = function() {
+        setTimeout(function() {
+            // Hide the loader after 4 seconds
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('content').style.display = 'block'; // Show the content
+        }, 4000); // 4000ms = 4 seconds
+    };
+
+
+  window.addEventListener('load', () => {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  });
+
+  window.addEventListener("load", function () {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  });
+
+
+  
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop the form from submitting normally
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name && email && message) {
+      // Show social icons
+      document.getElementById('socialIcons').style.display = 'flex';
+
+      // Prepare the text to send
+      const fullMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+      // WhatsApp link
+      document.getElementById('whatsappLink').href = `https://wa.me/2348034794114?text=${fullMessage}`;
+      
+      // Gmail (mailto) link
+      document.getElementById('emailLink').href = `mailto:Kenzygourmet@gmail.com?subject=Contact%20Message&body=${fullMessage}`;
+
+      // Instagram (You can't directly send a message, but can link to profile or DMs)
+      document.getElementById('instagramLink').href = `https://www.instagram.com/yourprofile/`;
+    } else {
+      alert('Please fill all fields.');
+    }
+  });
+</script>
+  <footer>
+    &copy; 2025 Ruflex Ventures Solar & Battery Store. All rights reserved.
+  </footer>
+</main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+  

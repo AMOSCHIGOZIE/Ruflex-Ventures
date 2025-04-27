@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kennet Ekenne - More Products</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #06264e, #0a3d62);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: slideDown 1s ease-out;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #06264e;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .product {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      text-align: center;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+    .product:hover {
+      transform: translateY(-8px) rotateZ(-0.5deg);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .product:hover img {
+      transform: scale(1.05);
+    }
+    .product h3 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+    }
+    .product p {
+      font-weight: bold;
+      color: #0a3d62;
+      font-size: 18px;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #06264e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 10px;
+      animation: pulse 2s infinite;
+    }
+    .btn:hover {
+      background-color: #0a3d62;
+    }
+    footer {
+      text-align: center;
+      background: #06264e;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+      animation: slideUp 1s ease-in;
+    }
+
+    /* Modal Animation */
+    #orderModal {
+      display:none;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.6);
+      z-index:9999;
+      justify-content:center;
+      align-items:center;
+    }
+    #orderModal > div {
+      background:#fff;
+      padding:30px;
+      border-radius:8px;
+      width:90%;
+      max-width:400px;
+      position:relative;
+      animation: zoomIn 0.5s ease;
+    }
+
+  #lithiumImage {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+  
+  
+    /* Keyframes */
+    @keyframes slideDown {
+      from {transform: translateY(-100%); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    @keyframes slideUp {
+      from {transform: translateY(100%); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    @keyframes zoomIn {
+      from {transform: scale(0.5); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+    @keyframes pulse {
+      0%, 100% {transform: scale(1);}
+      50% {transform: scale(1.05);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>More Products</h1>
+  </header>
+
+  <div class="container">
+    <h2>Explore Our Full Range</h2>
+    <div class="products">
+      <!-- Repeat this div and change data-aos delay for each product -->
+      <div class="product" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/downloadss.jpeg" alt="Inverter 1.5kVA">
+        <h3>Inverter 1.5kVA</h3>
+        <p>₦180,000</p>
+        <button class="btn" onclick="order('Inverter 1.5kVA', '₦180,000')">Add to Cart</button>
+      </div>
+      
+      <div class="products">
+  <div class="product" data-aos="fade-up" data-aos-delay="100">
+    <img src="images/downloadss3456.jpeg" alt="Inverter 1.5kVA">
+    <h3>Quanta 200ah</h3>
+    <p>₦140,000</p>
+    <button class="btn" onclick="order('Quanta 200ah', '₦140,000')">Add to Cart</button>
+  </div>
+
+  <div class="product" data-aos="fade-up" data-aos-delay="200">
+    <img src="images/batteryterminal.jpg" alt="Battery Terminal Clamp ">
+    <h3>Battery Terminal Clamp </h3>
+    <p>₦2,500</p>
+    <button class="btn" onclick="order('Battery terminal Clamp ', '₦2,500')">Add to Cart</button>
+  </div>
+        
+        <div class="product" data-aos="fade-up" data-aos-delay="200">
+    <img src="images/solarcable.jpg">
+    <h3>Solar cable</h3>
+    <p>₦5,000</p>
+    <button class="btn" onclick="order('Solar cable', '5,000')">Add to Cart</button>
+  </div>
+
+  <div class="product" data-aos="fade-up" data-aos-delay="300">
+    <img id="lithiumImage" src="images/lithium-battery.jpg" alt="Lithium Battery 200Ah">
+     <h3>Lithium Battery 200Ah</h3>
+    <p>₦250,000</p>
+    <button class="btn" onclick="order('Lithium Battery 200Ah', '₦250,000')">Add to Cart</button>
+  </div>
+
+  <div class="product" data-aos="fade-up" data-aos-delay="400">
+    <img src="images/inverter2.jpg" alt="Hybrid Inverter 5kVA">
+    <h3>Hybrid Inverter 5kVA</h3>
+    <p>₦420,000</p>
+    <button class="btn" onclick="order('Hybrid Inverter 5kVA', '₦420,000')">Add to Cart</button>
+  </div>
+
+  <div class="product" data-aos="fade-up" data-aos-delay="500">
+    <img src="images/solar250.jpg" alt="Kan 12v. 220AH Solar Tubular Battery">
+    <h3>Kan 12v. 220AH Solar Tubular Battery</h3>
+    <p>₦320,000</p>
+    <button class="btn" onclick="order('Kan 12v. 220AH Solar Tubular Battery', '₦320,000')">Add to Cart</button>
+  </div>
+
+  <div class="product" data-aos="fade-up" data-aos-delay="600">
+    <img src="images/downloadsss.png" alt="Power station marstek 1000watts">
+    <h3>Power station marstek 1000watts</h3>
+    <p>₦150,000</p>
+    <button class="btn" onclick="order('Power station marstek 1000watts', '₦150,000')">Add to Cart</button>
+  </div>
+
+  <div class="product" data-aos="fade-up" data-aos-delay="700">
+    <img src="images/downloads.jpeg" alt="Mopower 1.5kva">
+    <h3>Mopower 1.5kva</h3>
+    <p>₦150,000</p>
+    <button class="btn" onclick="order('Mopower 1.5kva', '₦150,000')">Add to Cart</button>
+  </div>
+
+  <div class="product" data-aos="fade-up" data-aos-delay="800">
+    <img src="images/imagess.jpeg" alt="Mopower 2.5kva">
+    <h3>Mopower 2.5kva</h3>
+    <p>₦200,000</p>
+    <button class="btn" onclick="order('Mopower 2.5kva', '₦200,000')">Add to Cart</button>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="orderModal">
+    <div>
+      <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:20px;">&times;</span>
+      <h2 style="text-align:center;">Complete Your Order</h2>
+      <form id="orderForm" onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="customerName" placeholder="Your Name" required style="width:100%; margin:10px 0; padding:10px;">
+        <input type="text" id="customerAddress" placeholder="Your Address" required style="width:100%; margin:10px 0; padding:10px;">
+        <input type="tel" id="buyerPhone" placeholder="Your Phone Number" required style="width:100%; margin:10px 0; padding:10px;">
+        <input type="text" id="productName" readonly style="width:100%; margin:10px 0; padding:10px; background:#eee;">
+        <button type="submit" style="padding:10px 20px; background:#06264e; color:white; border:none; width:100%; border-radius:5px;">Proceed to WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Kennet Ekenne Solar & Battery Store. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    let cartProduct = '';
+
+    function order(productName, price) {
+      cartProduct = `${productName} - ${price}`;
+      document.getElementById('productName').value = cartProduct;
+      document.getElementById('orderModal').style.display = 'flex';
+    }
+
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('customerName').value;
+      const phone = document.getElementById('buyerPhone').value;
+      const address = document.getElementById('customerAddress').value;
+      const product = document.getElementById('productName').value;
+
+      const message = `New Order:\n\nName: ${name}\nPhone: ${phone}\nAddress: ${address}\nProduct: ${product}`;
+      const whatsappUrl = `https://wa.me/2348027315787?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+      closeModal();
+    }
+
+    function closeModal() {
+      document.getElementById('orderModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('orderModal');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  
+  
+  // Change Lithium Battery Image Every 5 Seconds with Fade Effect
+const lithiumImage = document.getElementById('lithiumImage');
+
+const lithiumImages = [
+  'images/lithium-battery.jpg',
+  'images/lithium-battery22.jpg',
+  'images/lithium-battery3.jpg'
+];
+
+let currentIndex = 0;
+
+setInterval(() => {
+  // Fade out the image
+  lithiumImage.style.opacity = 0;
+
+  setTimeout(() => {
+    // Change the image source after fade out
+    currentIndex = (currentIndex + 1) % lithiumImages.length;
+    lithiumImage.src = lithiumImages[currentIndex];
+
+    // Fade the image back in
+    lithiumImage.style.opacity = 1;
+  }, 1000); // Wait 1 second before changing the image
+}, 4000); // Every 4 seconds
+  
+  </script>
+</body>
+</html>
